@@ -1,0 +1,99 @@
+/* стиль заголовків та абзаців */
+h1 { color: #4d2c50; text-align: center; }
+p { color: #7a4985; line-height: 1.6; }
+
+#main-product {
+    text-transform: uppercase; 
+    border-bottom: 2px solid rgb(255, 71, 178);
+}
+
+/* селектор класу для картки товару */
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block; 
+    width: 200px;
+}
+
+/* складний селектор - картка бестселер */
+.card.featured { 
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+/* сталь передостанньої картки в каталозі */
+.card:nth-last-child(2) {
+    border-style: dashed; /* рамка пунктиром */
+}
+
+/* всі картки, окріім бестселера, мають прозорість */
+.card:not(.featured) { opacity: 0.9; }
+
+/* якщо в картці є опис, то + відступ знизу */
+.card:has(.description) { padding-bottom: 25px; }
+
+/* стилізація карток */
+.card:is(.featured, .new) { border: 2px solid rgb(255, 136, 0); }
+
+
+/* посилання */
+a:link { color: blue; } 
+a:visited { color: purple; }
+a:hover { color: rgb(255, 0, 149); text-decoration: underline; } 
+a:active { color: rgb(255, 251, 0); }
+
+.btn:active { background-color: #ff4db2; color: white; }
+
+/* ефект при наведенні на картку */
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-5px); /* підняття вгору */
+}
+
+/* li у списку .menu */
+.menu > li { display: inline; margin-right: 15px; } 
+
+/* перший абзац після h2 */
+h2 + p { font-weight: bold; } 
+
+/* всі абзаци, що йдуть після h2 на одному рівні */
+h2 ~ p { color: gray; } 
+
+/* пошук по типу */
+input[type="text"] { border: 1px solid #ccc; } 
+
+a[href^="https"] { font-weight: bold; } 
+input[name$="login"] { background: #eef; } 
+input[name^="user"] { background-color: #fff9e6; } 
+/* стани полів */
+input:disabled { background: #eee; cursor: not-allowed; }
+input:invalid { border: 2px solid rgb(255, 0, 234); }
+
+/*при натисканні у поле вводу*/
+input:focus {
+    outline: none;
+    border: 2px solid #7a4985; /* Фіолетова рамка при кліку */
+    background-color: #fff;
+}
+ 
+/*коли дані введено правильно*/
+input:valid {
+    border: 2px solid green;
+}
+
+input:checked + label {
+    font-weight: bold;
+    color: green;
+}
+li:first-child { color: rgb(122, 23, 98); } 
+li:last-child { border: none; } 
+
+/* кожна парна картка біла */
+.card:nth-child(2n) { background-color: #f9f9f9; } 
+
+/* вибір другого абзац, навіть якщо між ними є картинки */
+p:nth-of-type(2) { color: purple; } 
+
+a[href*="instagram"]::before { content: "🟣 "; }
+a[href*="facebook"]::before { content: "🔵"; }

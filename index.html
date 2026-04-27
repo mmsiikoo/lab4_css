@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин іграшок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <header>
+      <h1 id="main-product">Магазин іграшок</h1>
+      <nav>
+            <ul class="menu">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<hr>
+
+    <main>
+      <section class="hero">
+            <img width="900" height="500" src="data:image/png;base64,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" 
+            alt="Банер магазину" class="main-img">
+            <h2 align="center">Ласкаво просимо до нашого магазину!</h2>
+            <p align="center">Створюємо магію для дітей та дорослих.</p>
+        </section>
+<hr>
+        <section class="info-block child">
+            <div class="parent">
+                <h2 align="center">Інформація про доставку</h2>
+                <p align="center">Доставляємо Новою Поштою та Укрпоштою.</p>
+                <p align="center">При замовленні від 1000 грн — доставка безкоштовна!</p>
+                <div class="extra-info descendant">
+                    <p align="center">Кур'єрська доставка доступна лише у великих містах.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<hr>
+    <footer>
+        <div class="contacts">
+            <h3 align="center">Контакти</h3>
+            <p align="center">Власниця: <strong>Анастасія Демчук</strong></p>
+            <p align="center">Email: <a href="mailto:budynok.ihrashok@example.com">budynok.ihrashok@example.com</a></p>
+            <p align="center">Тел: +380 99 123 45 67</p>
+            <div class="socials" align="center">
+                <a href="https://www.instagram.com/budynok.ihrashok/" class="inst">Instagram: @budynok.ihrashok</a>
+                <a href="https://www.facebook.com/Ihrashkyua" class="fb">Facebook: Будинок іграшок</a>
+            </div>
+        </div>
+        <p align="center">&copy; 2026 Магазин "Магія іграшок".</p>
+        <a href="https://www.google.com">Шукати в Google</a>       
+    </footer>
+
+
+</body>
+</html>
+    
